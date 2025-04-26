@@ -1,4 +1,9 @@
+from django import forms
 from django.shortcuts import render
+
+class NewTaskForm(forms.Form):
+    taskTitle =forms.CharField(label="New Task title")
+    taskDescription =forms.CharField(label="Task description")
 
 tasks = [
     {
@@ -30,5 +35,5 @@ def index(request):
 
 def add(request):
     return render(request, 'tasks/add.html', {
-        'tasks': tasks,
+        'form': NewTaskForm()
     })
