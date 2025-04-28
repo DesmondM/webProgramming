@@ -3,7 +3,7 @@
     <h1>Tasks</h1>
     <ul>
         {% for task in tasks %}
-            <li>{{ task.id }} - {{task.title}} - {{task.description}}</li>
+            <li> {{task.title}} - {{task.description}}</li>
         {% endfor %}
     </ul>
     <a href= "{% url 'tasks:add' %}"> Add a new task</a>
