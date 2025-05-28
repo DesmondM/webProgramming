@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#red').onclick =function(){
+                document.querySelector('h1').style.color = 'red';
+                document.querySelector('h1').style.fontSize = 'initial';
+            }
+            document.querySelector('#green').onclick = function(){
+                document.querySelector('h1').style.color = 'green';
+            }
+            document.querySelector('#blue').onclick = function(){
+                document.querySelector('h1').style.color = 'blue';
+            }
+            document.querySelector('#bigger').onclick = function(){
+                document.querySelector('h1').style.fontSize = '60px';
+            }
+        });
+        
+        
+    </script>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+    <button id="bigger">Bigger</button>
+</body>
+</html>

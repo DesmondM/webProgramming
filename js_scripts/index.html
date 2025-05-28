@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Code</title>
+    <Script>
+        let counter = 0;
+        function count(){
+            
+            counter++
+            document.querySelector('h1').innerHTML= "Counter:  " + counter
+
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('button').onclick= count
+        })
+      
+    </Script>
+</head>
+<body>
+    <h1 >Counter:  0</h1>
+    <button >Start counting...</button>
+</body>
+</html>
