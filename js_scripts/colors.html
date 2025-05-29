@@ -21,7 +21,12 @@
                 document.querySelector('h1').style.fontSize = '60px';
             }
         });
-        
+
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#color').onchange = function(){
+                document.querySelector('h1').style.color = this.value;
+            }
+        });
         
     </script>
 </head>
@@ -31,5 +36,10 @@
     <button id="green">Green</button>
     <button id="blue">Blue</button>
     <button id="bigger">Bigger</button>
+    <select id="color">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        </select>
 </body>
 </html>
