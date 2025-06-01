@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange rate</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            fetch('https://api.exchangerate-api.com/v4/latest/USD')
+              .then(response=>response.json())  
+              .then(data=>{
+                const rate = data.rates.ZAR;
+                document.querySelector('body').innerHTML = `1 USD = ${rate} ZAR`;
+              })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
