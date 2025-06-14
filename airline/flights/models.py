@@ -23,3 +23,13 @@ class Passenger(models.Model):
 
     def __str__(self):
         return f"{self.firstName} {self.lastName}"
+    
+class Carrier(models.Model):
+    name = models.CharField(max_length=64)
+    manufacturer = models.CharField(max_length=64)
+    planeModel = models.CharField(max_length=64)
+    flights= models.ManyToManyField(Flight, blank=False, related_name="carriers")
+
+
+    def __str__(self):
+        return f"{self.name} {self.manufacturer} {self.planeModel}"

@@ -7,12 +7,24 @@
     <li>Destination: {{flight.destination}}</li>
     <li>Duration: {{flight.duration}}</li>
 </ul>
+ {% if carriers %}
+ <h2>Carrier details</h2>
+ {% endif %}
+ <ul>
+    {%for carrier in carriers%}
+    <li> {{carrier}}</li>
+    {% endfor %}
+ </ul>
+
+ <h2>Passenger details</h2>
 <ul>
-    {% for passenger in pessengers %}
-    <li>{{passenger}}</li>
+    {% for passenger in passengers %}
+    <li>{{ passenger}}</li>
     {% empty %}
     <li>No passengers</li>
     {% endfor %}
 </ul>
+
+<a href="{% url 'index' %}">Back to Flight List</a>
 
 {% endblock%}
