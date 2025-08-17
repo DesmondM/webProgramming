@@ -35,3 +35,6 @@ plt.ylabel('Accuracy')
 plt.ylim([0.5, 1])
 plt.legend(loc='lower right')
 plt.show()
+
+model.save('my_model.keras')
+model = tf.keras.models.load_model('cifar10_cnn.h5')
